@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en" ng-controller="confusionApp">
+<html lang="en" ng-app="confusionApp">
 
 <head>
      <meta charset="utf-8">
@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head 
          content must come *after* these tags -->
-    <title>Ristorante Con Fusion: About Us</title>
+    <title>Ristorante Con Fusion: Contact Us</title>
         <!-- Bootstrap -->
 <!-- build:css styles/main.css -->
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -69,7 +69,7 @@
            </div>
             <div class="col-xs-12 col-sm-9" ng-controller="FeedbackController">
                 <form class="form-horizontal" role="form" name="feedbackForm" ng-submit="sendFeedback()" novalidate>
-                    <div class="form-group" ng-class="{'has-error' : feedbackForm.firstname.$error.required && !feedbackForm.firstname.$pristnie }">
+                    <div class="form-group" ng-class="{'has-error' : feedbackForm.firstname.$error.required && !feedbackForm.firstname.$pristine }">
                         <label for="firstname" class="col-sm-2 control-label">First Name</label>
                         <div class="col-sm-10">
                         <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter First Name" ng-model="feedback.firstName" required>
@@ -116,7 +116,7 @@
                             </label>
                         </div>
                         <div class="col-sm-3 col-sm-offset-1" ng-show="feedback.agree">
-                            <select class="form-control" ng-model="feedback.mychannel" ng-options="channel.value as channel.label fro channel in channels">
+                            <select class="form-control" ng-model="feedback.mychannel" ng-options="channel.value as channel.label for channel in channels">
                                 <option value="">Tel. or Email?</option>
                             </select>
                             <span ng-show="invalidChannelSelection" class="help-block">Select an option.</span>
@@ -141,7 +141,7 @@
               <p>Contact Tel.: ({{feedback.tel.areaCode}}) {{feedback.tel.number}}</p>
               <p>Contact Email: {{feedback.email}}</p>
               <p ng-show="feedback.agree">Contact by: {{feedback.mychannel}}</p>
-              <p>Comments: {{feedback.comments}}</p>p style="padding:20px;"></p>
+              <p>Comments: {{feedback.comments}}</p>
             </div>
        </div>
 
