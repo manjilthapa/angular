@@ -28,7 +28,7 @@
                     <ul class="media-list tab-pane fade in active">
                         <li class="media" ng-repeat="dish in dishes | filter:filtText">
                             <div class="media-left media-middle">
-                                <a href="#">
+                                <a href="#/menu/{{dish._id}}">
                                     <img class="media-object img-thumbnail" ng-src={{dish.image}} alt="Uthapizza">
                                 </a>
                             </div>
@@ -44,9 +44,8 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
     </div>
-=======
+
     </div>
 
     <!-- build:js scripts/main.js -->
@@ -62,4 +61,3 @@
 </body>
 
 </html>
->>>>>>> c9926b56166851dd2cac5569fe401cd8d5783d57
